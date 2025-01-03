@@ -8,7 +8,7 @@ jobs:
     name: Print Hello, World!
     runs-on: ubuntu-latest
     steps: 
-    - run: Echo "Hello, World!"
+    - run: echo "Hello, World!"
 
     
  
