@@ -6,9 +6,14 @@ on: workflow_dispatch
 jobs:
   PrintHelloWorld:
     name: Print Hello, World!
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps: 
     - run: echo "Hello, World!"
+  PrintDirectory:
+    name: Print directory
+    runs-on: ubuntu-latest
+    steps:
+    - run: ls
 
     
  
