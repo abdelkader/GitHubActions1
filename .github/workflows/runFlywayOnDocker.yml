@@ -8,4 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     container: flyway/flyway
     steps:
-    -  step: flyway --version
+    - name: runFlyway
+      run: flyway --version
