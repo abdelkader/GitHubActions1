@@ -16,11 +16,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: ls
-  Test:
-    name: testing
-    runs-on: windows-latest
-    steps:
-    - run: dir
-
     
  
