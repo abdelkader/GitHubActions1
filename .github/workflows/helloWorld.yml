@@ -12,6 +12,7 @@ jobs:
     - run: ls
   PrintDirectory:
     name: Print directory
+    needs: PrintHelloWorld
     runs-on: ubuntu-latest
     steps:
     - run: ls
