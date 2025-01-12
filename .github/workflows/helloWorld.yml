@@ -8,7 +8,8 @@ jobs:
     name: Print Hello, World!
     runs-on: ubuntu-latest
     steps: 
-    - run: echo "Hello, World!"
+    - run: echo "Hello, World!" > file.txt
+    - run: ls
   PrintDirectory:
     name: Print directory
     runs-on: ubuntu-latest
