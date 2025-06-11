@@ -1,9 +1,8 @@
 name: Release Hello World
 
 on:
-  push:
-    tags:
-      - 'v*.*.*'
+  release:
+    types: [published]
 
 jobs:
   release:
@@ -17,7 +16,8 @@ jobs:
       - name: Create file with dynamic content
         run: |
           echo "Hello, World!" > file.txt
-          echo "Tag: ${{ github.ref_name }}" >> file.txt
+          echo "Release: ${{ github.event.release.tag_name }}" >> file.txt
+          echo "Published at: ${{ github.event.release.published_at }}" >> file.txt
           echo "Generated at: $(date -u)" >> file.txt
 
       - name: Upload to GitHub Release
